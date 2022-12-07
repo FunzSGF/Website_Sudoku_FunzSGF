@@ -1,0 +1,385 @@
+body {
+	background-color: #E4E4E4;
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/************************
+ * Titres
+ ************************/
+
+h2 {
+	font-size: 64px;
+	margin: 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+	font-weight: normal;
+	text-shadow: 0px 5px 5px gray;
+
+}
+
+h3 {
+	margin: 0;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	text-align: center;
+}
+
+
+/************************
+ * Global
+ ************************/
+
+main {
+	background-color: #E4E4E4;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: column;
+}
+
+section {
+
+	background-color: #B0ADAD;
+	border: 0;
+	border-radius: 1.5rem;
+	flex-flow: column;
+	margin: 4rem;
+	flex-grow: 1; /* définit le facteur d'expansion d'un élément flexible selon sa dimension principale.*/
+}
+
+
+p {
+	margin-bottom: 2rem;
+	padding: 2rem;
+
+}
+
+p:first-of-type {
+	/*first-of-type permet de cibler le premier élément d'un type donné parmi ceux d'un même
+	élément parent (et de même niveau).*/
+	margin-top: 0;
+}
+
+a{
+	color: #890008;
+
+}
+
+figure {
+	margin: 0;
+}
+
+
+/************************
+ * Listes
+ ************************/
+
+ul {
+	display: flex;
+	flex-direction: column;/* définit l'axe principal et la direction des éléments (normale ou inversée).*/
+	justify-content: center; /* La propriété CSS justify-content indique la façon dont l'espace doit être réparti
+	entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le
+	conteneur est une grille -> centré sur l'axe horizontal ici */
+	margin: 2rem 0;
+}
+
+li {
+	border-radius: 2rem ;
+	color: #000000;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+	text-align: left;
+}
+
+/************************
+ * Headers
+ ************************/
+
+body > header {
+	align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	position: sticky;
+	top: 0px;
+}
+
+body > header img {
+	float: left;
+	height: 128px;
+}
+
+/************************
+ * Navigation
+ ************************/
+
+nav {
+	background-color: #fafafa;
+	flex-shrink: 0;
+	width: 100%;
+	box-shadow: 0 0 10px 0 gray;
+	top: 0;
+
+}
+
+nav ul {
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0;
+	padding: 2rem;
+}
+
+nav li {
+	background-color: #B0ADAD;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+
+	flex-flow: row;
+	border-radius: 1rem;
+	margin: 0.7rem;
+	padding: 0;
+	text-align: right;
+
+	transition-duration: 300ms;
+	transition-property: background-color width;
+	width: 100%;
+}
+
+nav a {
+	color: #000000;
+	display: inline-block;
+	margin-right: 1rem;
+	padding: .5rem 0;
+	text-decoration: none;
+}
+
+/********* SURVOL **********/
+/* La pseudo-classe :hover permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec
+le pointeur sans nécessairement l'activer*/
+
+nav li:hover {
+	background-color: #5B0000;
+	width: 110%;
+}
+
+nav li:hover a {
+	color: #fafafa;
+}
+
+/************************
+ * Accueil
+ ************************/
+
+#accueil article {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#accueil img {
+	width: 90%;
+	margin: 1rem;
+}
+
+/************************
+ * Historique
+ ************************/
+
+#histoire {
+	display: flex;
+	flex-direction:row-reverse ;
+}
+
+#histoire p {
+	text-align: justify;
+	text-align-last: justify;
+}
+
+#histoire img {
+	padding: 1rem;
+	border-radius: 10% ;
+}
+
+/************************
+ * Règles
+ ************************/
+
+#regles {
+	display : flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+#regles article {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+
+	background-color: #fafafa;
+	margin: 1rem;
+	border-radius: 1rem;
+	width:95%;
+}
+
+#regles ul {
+	width:45%;
+
+}
+
+#regles a {
+	padding:1rem;
+}
+
+/************************
+ * Grilles
+ ************************/
+
+#grilles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom:2rem;
+}
+
+#grilles article {
+	align-items:center;
+
+}
+
+#grilles img {
+	width : 550px;
+	height : 550px;
+	margin:1rem;
+}
+
+/************************
+ * Jeux
+ ************************/
+
+#jeux {
+	display : flex;
+	flex-wrap: wrap;
+}
+
+#jeux header {
+	background-color: #5B0000;
+	width: 100%;
+	border-radius: 1rem 1rem 0rem 0rem;
+	margin-bottom: 1rem;
+	color :#fafafa;
+	font-family: 'Moulpali', cursive;
+	font-size: 64px;
+}
+
+#jeux h3 {
+	font-weight: normal;
+}
+
+#jeux article {
+	display : flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border: 2px dashed black;
+
+	background-color: #F9F9F9;
+	border-radius: 1rem;
+	margin: 2rem;
+	padding: 0rem;
+	width: 44%;
+}
+
+#jeux table {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#jeux p {
+	text-align: justify;
+	text-align-last: justify;
+}
+#jeux img {
+	width: 50%;
+}
+
+span {
+	text-decoration: underline black ;
+}
+
+/************************
+ * Tables
+ ************************/
+
+table {
+	border-collapse: collapse;
+	width: 90%;
+}
+
+table th,
+table td {
+	border: 1px solid black;
+	padding: .5rem;
+	text-align: center;
+}
+
+table th {
+	background-color: #5B0000;
+	color: #fafafa;
+	font-weight: normal;
+}
+
+/************************
+ * SITES
+ ************************/
+
+#site {
+	display : flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+#site article {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 1rem;
+	background-color: #fafafa;
+	flex-shrink: 2;
+}
+
+#site ul {
+	width: 70%;
+	border-left: black solid 2px;
+}
+
+#site img {
+	width: 10%;
+	margin: 1rem;
+}
+
+/************************
+ * Footer
+ ************************/
+
+footer {
+	background-color: #ECECEC;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 0 10px 0 gray
+}
+
+footer p {
+	color: #8A8A8A;
+	margin: 0;
+}
